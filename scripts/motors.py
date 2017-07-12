@@ -54,7 +54,7 @@ class Motor():
         self.last_time = rospy.Time.now()
 
     def onoff_response(self, onoff):
-        d = TriggerResonse()
+        d = TriggerResponse()
         d.success = self.set_power(onoff)
         d.message = "ON" if self.is_on else "OFF"
         return d
